@@ -1,0 +1,29 @@
+version: '3'
+services:
+  movies:
+    image: vinay3345/moviesservice:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+
+  train:
+    image: vinay3345/trainservice:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+
+  dth:
+    image: vinay3345/dthservice:latest
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: vinay3345/rechargeservice:latest
+    ports:
+      - "84:80"
+    deploy:
+      replicas: 3
